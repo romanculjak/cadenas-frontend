@@ -1,10 +1,19 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Outlet, useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 
 type Props = {}
 
 function RootLayout({}: Props) {
+
+  const navigate = useNavigate();
+
+  useEffect(()=> {
+
+    navigate('/products');
+    
+  },[])
+
   return (
     <>
     <header>
