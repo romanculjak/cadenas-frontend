@@ -67,8 +67,8 @@ const Pagination = ({ currentPage, totalPages, onPagePreviousChange, onPageNextC
       {pageNumbers.map((pageNumber) => (
         <button
           key={pageNumber}
-          className={`bg-white border-y border-l border-gray-300  p-2 ${
-            pageNumber === currentPage ? "bg-purple-600 text-white" : "hover:text-purple-600 hover:bg-purple-200"
+          className={`border-y border-l border-gray-300  p-2 ${
+            pageNumber === currentPage ? "bg-purple-600 text-white" : "bg-white hover:text-purple-600 hover:bg-purple-200"
           }`}
           onClick={() => handlePageNumberClick(pageNumber)}
         >
